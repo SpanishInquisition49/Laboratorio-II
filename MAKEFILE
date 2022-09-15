@@ -1,0 +1,11 @@
+CCFLAGS = -Wall -pedantic
+CC = gcc
+
+sorting_algo: Sorting_Algo/stdsort.c
+	$(CC) -c Sorting_Algo/stdsort.c -o Sorting_Algo/stdsort.o
+
+utility: Utility/utils.c
+	$(CC) -c Utility/utils.c -o Utility/utils.o
+
+source: source.c
+	$(CC) Sorting_algo/stdsort.o Utility/utils.o source.c -o source.out
